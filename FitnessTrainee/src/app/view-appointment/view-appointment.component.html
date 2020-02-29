@@ -1,0 +1,28 @@
+<p *ngIf="!emps && !errMsg">Please wait its loading....</p>
+<p *ngIf="errMsg">{{errMsg}}</p>
+<table *ngIf="appointment">
+    <thead>
+        <tr>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>Age</th>
+        <th>Email</th>
+        
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of appointment">
+            <td>{{a.firstName}}</td>
+            <!-- <td>{{e.joinDate | date:'dd-mm-yyyy'}}</td> -->
+            <td>{{a.lastName}}</td>
+            <td>{{a.age}}</td>
+            <!-- <td>{{e.mobileNumber}}</td> -->
+            <td>{{a.email}}</td>
+            <!-- <td>{{e.dept}}</td> -->
+            <!-- <td> <a href="#" (click)="">Delete</a> -->
+            <!-- <span> | </span>
+            <a routerLink="">EDIT</a> -->
+            
+        </tr>
+    </tbody>
+</table>
